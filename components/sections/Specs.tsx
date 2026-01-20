@@ -51,7 +51,7 @@ export const Specs = () => {
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-serif font-bold text-text-main"
                     >
-                        体験内容と仕様
+                        体験内容
                     </motion.h2>
                 </div>
 
