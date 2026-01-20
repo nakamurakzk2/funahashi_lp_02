@@ -18,21 +18,15 @@ export const Benefit = () => {
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
                             購入者限定特典
                             <br />
-                            <span className="text-2xl md:text-3xl">「車庫内部」NFT権利証</span>
+                            <span className="text-2xl md:text-3xl">非公開車庫写真のNFT権利証</span>
                         </h2>
                         <div className="h-1 w-20 bg-accent mb-8" />
                         <div className="space-y-6 text-text-main/80 leading-relaxed font-light">
                             <p>
-                                本企画の購入者様には、感謝の証として特別なNFTを発行いたします。
+                                普段は立ち入ることができない「富山地方鉄道の車庫内部」を収めた、貴重な写真を使用したデジタル権利証（NFT）をお渡しします。
                             </p>
                             <p>
-                                デザインは、普段関係者しか立ち入れない「富山地方鉄道 車庫内部」の
-                                貴重な写真をアートワークとして使用。
-                            </p>
-                            <p>
-                                あなたの支援が、デジタルの確かな証明として永遠に残ります。
-                                これは単なる画像データではなく、このプロジェクトに参加した
-                                誇り高い証です。
+                                体験の証としてだけでなく、鉄道ファン垂涎のコレクション価値を持つ特別な記念品です。
                             </p>
                             <div className="pt-6">
                                 <Button
@@ -65,11 +59,6 @@ export const Benefit = () => {
                         />
                         {/* Shine effect overlay */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/20 to-white/0 opacity-0 hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
-                        {/* Badge */}
-                        <div className="absolute top-4 right-4 bg-accent text-white font-bold px-4 py-2 rounded-full shadow-lg transform rotate-12">
-                            Not for Sale
-                        </div>
                     </div>
                     {/* Background Decor */}
                     <div className="absolute -z-10 top-6 -left-6 w-full h-full bg-primary/10 rounded-lg" />
