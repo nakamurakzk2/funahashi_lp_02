@@ -54,7 +54,7 @@ export const Benefit = () => {
                     whileHover={{ scale: 1.02, rotate: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="flex-1 relative"
+                    className="flex-1 relative w-full"
                 >
                     <div className="relative aspect-square w-full rounded-lg overflow-hidden shadow-2xl border-8 border-white">
                         <Image
