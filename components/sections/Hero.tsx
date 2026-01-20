@@ -57,7 +57,7 @@ export const Hero = () => {
             <motion.div style={{ y }} className="absolute inset-0 z-0">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: "url('/images/funahashimelody_top.png')" }}
+                    style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/funahashimelody_top.png')` }}
                 />
                 {/* Lighter Gradient Overlay: Clear top, subtle bottom for readability without being too dark */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
