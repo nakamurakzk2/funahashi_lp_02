@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 
 export const Hero = () => {
@@ -14,7 +15,7 @@ export const Hero = () => {
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
     return (
-        <section ref={ref} className="relative h-screen w-full overflow-hidden">
+        <section ref={ref} className="relative w-full md:h-screen overflow-hidden">
             {/* Opening Animation Overlay */}
             <motion.div
                 initial={{ opacity: 1 }}
@@ -26,7 +27,7 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
-                        className="text-2xl md:text-4xl font-serif font-bold text-primary"
+                        className="text-2xl md:text-4xl font-serif font-bold text-text-main"
                     >
                         あなたの作ったメロディが、電車で流れる。
                     </motion.h2>
@@ -53,62 +54,82 @@ export const Hero = () => {
                 </div>
             </motion.div>
 
-            {/* Background Parallax */}
-            <motion.div style={{ y }} className="absolute inset-0 z-0">
-                {/* Desktop Background */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center hidden md:block"
-                    style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/funahashimelody_top.png')` }}
-                />
-                {/* Mobile Background */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center md:hidden"
-                    style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero_top.png')` }}
-                />
-                {/* Lighter Gradient Overlay: Clear top, subtle bottom for readability without being too dark */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            </motion.div>
-
-            {/* Content - Positioned at bottom */}
-            <div className="relative z-10 flex h-full flex-col items-center justify-end pb-32 text-center text-white px-4">
-                {/* Hidden SEO Text */}
-                <h1 className="sr-only">
-                    あなたの作ったメロディが、電車で流れる。富山地方鉄道・越中舟橋駅 車内メロディクリエイト体験
-                </h1>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 4.0, ease: "easeOut" }} // Delayed to appear after overlay fades
-                >
-                    <Button
-                        variant="accent"
-                        onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
-                        className="text-xl px-10 py-5 shadow-2xl"
+            {/* --- Mobile Layout (Stack: Image then Button) --- */}
+            <div className="md:hidden flex flex-col w-full bg-white">
+                <div className="relative w-full">
+                    <Image
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero_top.png`}
+                        alt="Hero Top"
+                        width={800}
+                        height={1000}
+                        className="w-full h-auto"
+                        priority
+                    />
+                </div>
+                {/* Button Area */}
+                <div className="py-12 px-6 flex justify-center items-center bg-white">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 4.0, ease: "easeOut" }}
                     >
-                        限定5枠の権利を購入する
-                    </Button>
-                </motion.div>
+                        <Button
+                            variant="accent"
+                            onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
+                            className="text-lg px-8 py-4 shadow-xl w-full max-w-xs"
+                        >
+                            限定5枠の権利を購入する
+                        </Button>
+                    </motion.div>
+                </div>
             </div>
 
-            {/* Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 4.5, duration: 1 }} // Delayed
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white"
-            >
-                <div className="flex flex-col items-center gap-2">
-                    <span className="text-xs tracking-widest uppercase">Scroll</span>
-                    <div className="h-16 w-[1px] bg-white/50 relative overflow-hidden">
-                        <motion.div
-                            animate={{ y: ["-100%", "100%"] }}
-                            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-                            className="absolute inset-0 w-full bg-white"
-                        />
-                    </div>
+            {/* --- Desktop Layout (Parallax Cover + Overlay Button) --- */}
+            <div className="hidden md:block absolute inset-0 w-full h-full">
+                <motion.div style={{ y }} className="absolute inset-0 z-0">
+                    <div
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/funahashimelody_top.png')` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                </motion.div>
+
+                {/* Content - Positioned at bottom */}
+                <div className="relative z-10 flex h-full flex-col items-center justify-end pb-32 text-center text-white px-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 4.0, ease: "easeOut" }}
+                    >
+                        <Button
+                            variant="accent"
+                            onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
+                            className="text-xl px-10 py-5 shadow-2xl"
+                        >
+                            限定5枠の権利を購入する
+                        </Button>
+                    </motion.div>
                 </div>
-            </motion.div>
+
+                {/* Scroll Indicator (Desktop Only) */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 4.5, duration: 1 }}
+                    className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white"
+                >
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-xs tracking-widest uppercase">Scroll</span>
+                        <div className="h-16 w-[1px] bg-white/50 relative overflow-hidden">
+                            <motion.div
+                                animate={{ y: ["-100%", "100%"] }}
+                                transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+                                className="absolute inset-0 w-full bg-white"
+                            />
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
         </section>
     );
 };
