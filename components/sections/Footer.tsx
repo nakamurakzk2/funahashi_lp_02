@@ -25,7 +25,7 @@ export const Footer = () => {
                     </p>
 
                     <Button variant="accent" className="text-xl px-12 py-6 shadow-2xl hover:scale-105 transition-transform">
-                        限定5枠の権利を購入する
+                        体験を購入する
                     </Button>
                     <p className="mt-4 text-sm opacity-60">
                         ※ 外部決済サイトへ移動します

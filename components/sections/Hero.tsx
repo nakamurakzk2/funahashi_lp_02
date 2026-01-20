@@ -78,7 +78,7 @@ export const Hero = () => {
                             onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
                             className="text-lg px-8 py-4 shadow-xl w-full max-w-xs"
                         >
-                            限定5枠の権利を購入する
+                            体験を購入する
                         </Button>
                     </motion.div>
                 </div>
@@ -106,7 +106,7 @@ export const Hero = () => {
                             onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
                             className="text-xl px-10 py-5 shadow-2xl"
                         >
-                            限定5枠の権利を購入する
+                            体験を購入する
                         </Button>
                     </motion.div>
                 </div>

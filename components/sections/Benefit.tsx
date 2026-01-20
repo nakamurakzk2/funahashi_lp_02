@@ -40,7 +40,7 @@ export const Benefit = () => {
                                     onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
                                     className="w-full md:w-auto px-8 py-4 shadow-xl"
                                 >
-                                    限定5枠の権利を購入する
+                                    体験を購入する
                                 </Button>
                             </div>
                         </div>

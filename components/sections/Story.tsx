@@ -18,7 +18,7 @@ export const Story = () => {
                     className="relative h-[400px] md:h-[500px] w-full rounded-tr-[100px] overflow-hidden shadow-2xl"
                 >
                     <Image
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero6.png`}
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero8.png`}
                         alt="Social Value"
                         fill
                         className="object-cover"
@@ -45,17 +45,13 @@ export const Story = () => {
                         <div className="h-1 w-20 bg-accent mb-8" />
                         <div className="space-y-6 text-text-main/80 leading-relaxed font-light">
                             <p>
-                                立山黒部アルペンルートへの玄関口としても知られる富山地方鉄道。
-                                長い歴史の中で、地域の人々の日常の足を支え続けてきました。
+                                立山黒部アルペンルートなど世界的な観光資源を支えながら、日常の足として走り続ける富山地方鉄道。
                             </p>
                             <p>
-                                しかし、鉄道を守り続けるには、新しい形での支援が必要です。
-                                ただ「乗るもの」から、もっと深く「関わるもの」へ。
+                                当たり前にあるはずの「日常の足」を絶やさず守り続けることは、決して平坦な道のりではありません 。それでも、この鉄路を次世代へつなぐことは、地域というかけがえのない財産を守ることにつながります 。
                             </p>
                             <p>
-                                あなたの作成したメロディが駅に響くとき、
-                                それは単なる音以上の意味を持ちます。
-                                それは、あなたがこの鉄道と地域の一部になる瞬間なのです。
+                                この企画は、鉄道を「乗るもの」から「自ら関わり、形にするもの」へと変える挑戦です。あなたのクリエイティビティが、鉄道を応援する力になり、地域と鉄道をつなぐ新しい絆となります。
                             </p>
                             <div className="pt-6">
                                 <Button
@@ -63,7 +59,7 @@ export const Story = () => {
                                     onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
                                     className="w-full md:w-auto px-8 py-4 shadow-xl"
                                 >
-                                    限定5枠の権利を購入する
+                                    体験を購入する
                                 </Button>
                             </div>
                         </div>
