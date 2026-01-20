@@ -33,7 +33,7 @@ export const Concept = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="max-w-2xl mx-auto space-y-8 text-lg font-light leading-loose text-text-main/80"
+                className="max-w-2xl mx-auto space-y-8 text-base font-light leading-loose text-text-main/80"
             >
                 <p>
                     鉄道ファンなら一度は想像したことがあるはず。
