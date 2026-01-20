@@ -84,31 +84,37 @@ export const Hero = () => {
                 </div>
             </div>
 
-            {/* --- Desktop Layout (Parallax Cover + Overlay Button) --- */}
-            <div className="hidden md:block absolute inset-0 w-full h-full">
-                <motion.div style={{ y }} className="absolute inset-0 z-0">
-                    <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/funahashimelody_top.png')` }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                </motion.div>
-
-                {/* Content - Positioned at bottom */}
-                <div className="relative z-10 flex h-full flex-col items-center justify-end pb-32 text-center text-white px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 4.0, ease: "easeOut" }}
-                    >
-                        <Button
-                            variant="accent"
-                            onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
-                            className="text-xl px-10 py-5 shadow-2xl"
-                        >
-                            体験を購入する
-                        </Button>
+            {/* --- Desktop Layout (Aspect Ratio Maintained) --- */}
+            <div className="hidden md:block relative w-full bg-natural">
+                <div className="relative w-full overflow-hidden aspect-video">
+                    <motion.div style={{ y }} className="relative w-full h-full">
+                        <Image
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/funahashimelody_top.png`}
+                            alt="Hero Desktop"
+                            width={1920}
+                            height={1080}
+                            className="w-full h-full object-cover"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
                     </motion.div>
+
+                    {/* Content - Overlaid on the image but at the bottom center */}
+                    <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-12 md:pb-20 text-center text-white px-4">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 4.0, ease: "easeOut" }}
+                        >
+                            <Button
+                                variant="accent"
+                                onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
+                                className="text-xl md:text-2xl px-12 py-6 shadow-2xl hover:scale-105 transition-transform"
+                            >
+                                体験を購入する
+                            </Button>
+                        </motion.div>
+                    </div>
                 </div>
 
                 {/* Scroll Indicator (Desktop Only) */}
@@ -116,11 +122,11 @@ export const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 4.5, duration: 1 }}
-                    className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white"
+                    className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80"
                 >
-                    <div className="flex flex-col items-center gap-2">
-                        <span className="text-xs tracking-widest uppercase">Scroll</span>
-                        <div className="h-16 w-[1px] bg-white/50 relative overflow-hidden">
+                    <div className="flex flex-col items-center gap-1">
+                        <span className="text-[10px] tracking-widest uppercase font-bold">Scroll</span>
+                        <div className="h-12 w-[1px] bg-white/30 relative overflow-hidden">
                             <motion.div
                                 animate={{ y: ["-100%", "100%"] }}
                                 transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}

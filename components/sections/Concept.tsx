@@ -5,7 +5,7 @@ import { Section } from "@/components/ui/Section";
 
 export const Concept = () => {
     return (
-        <Section className="flex flex-col items-center text-center py-32 bg-natural">
+        <Section className="flex flex-col items-center text-center pt-16 pb-32 bg-natural">
             <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
