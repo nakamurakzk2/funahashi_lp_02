@@ -18,7 +18,7 @@ export const Story = () => {
                     className="relative h-[400px] md:h-[500px] w-full rounded-tr-[100px] overflow-hidden shadow-2xl"
                 >
                     <Image
-                        src="/images/ekimero6.png"
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero6.png`}
                         alt="Social Value"
                         fill
                         className="object-cover"

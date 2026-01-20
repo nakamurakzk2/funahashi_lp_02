@@ -58,7 +58,7 @@ export const Benefit = () => {
                 >
                     <div className="relative aspect-square w-full rounded-lg overflow-hidden shadow-2xl border-8 border-white">
                         <Image
-                            src="/images/ekimero4.png"
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero4.png`}
                             alt="NFT Benefit"
                             fill
                             className="object-cover"

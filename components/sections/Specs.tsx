@@ -66,7 +66,7 @@ export const Specs = () => {
                             className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="/images/ekimero3.png"
+                                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero3.png`}
                                 alt="Specs Visual"
                                 fill
                                 className="object-cover"

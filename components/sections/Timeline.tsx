@@ -35,7 +35,7 @@ export const Timeline = () => {
                     className="w-full max-w-2xl mx-auto relative aspect-square rounded-xl overflow-hidden shadow-lg"
                 >
                     <Image
-                        src="/images/ekimero2.png"
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero2.png`}
                         alt="Process Steps"
                         fill
                         className="object-cover"
