@@ -55,9 +55,15 @@ export const Hero = () => {
 
             {/* Background Parallax */}
             <motion.div style={{ y }} className="absolute inset-0 z-0">
+                {/* Desktop Background */}
                 <div
-                    className="absolute inset-0 bg-cover bg-center"
+                    className="absolute inset-0 bg-cover bg-center hidden md:block"
                     style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/funahashimelody_top.png')` }}
+                />
+                {/* Mobile Background */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center md:hidden"
+                    style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/ekimero_top.png')` }}
                 />
                 {/* Lighter Gradient Overlay: Clear top, subtle bottom for readability without being too dark */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
