@@ -19,7 +19,7 @@ export const Hero = () => {
             <motion.div
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0, transition: { delay: 3.5, duration: 0.8, ease: "easeInOut" } }}
-                className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-white text-text-main px-6 text-center pointer-events-none"
+                className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-white/90 backdrop-blur-sm text-text-main px-6 text-center pointer-events-none"
             >
                 <div className="max-w-3xl space-y-8">
                     <motion.h2
