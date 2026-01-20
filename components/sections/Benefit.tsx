@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 export const Benefit = () => {
     return (
         <Section className="py-24">
-            <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div className="flex flex-col-reverse md:flex-row-reverse items-center gap-12">
                 {/* Content Side */}
                 <div className="flex-1 space-y-8">
                     <motion.div>
