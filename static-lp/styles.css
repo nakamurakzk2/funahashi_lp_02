@@ -96,6 +96,16 @@ button {
     }
 }
 
+.visible-mobile {
+    display: inline;
+}
+
+@media (min-width: 768px) {
+    .visible-mobile {
+        display: none;
+    }
+}
+
 /* ========================================
    Animation Keyframes
 ======================================== */
