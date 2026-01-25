@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>越中舟橋駅 車内メロディクリエイト体験 | 富山地方鉄道</title>
+    <meta name="description" content="あなたの作ったメロディが、電車で流れる。富山地方鉄道・越中舟橋駅の車内メロディを作れる、限定5枠の特別な体験。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <!-- ========================================
+             Section 1: Hero (FV)
+        ======================================== -->
+        <section class="hero" id="hero">
+            <!-- Opening Animation Overlay -->
+            <div class="hero__opening-overlay" id="openingOverlay">
+                <div class="hero__opening-content">
+                    <h2 class="hero__opening-title animate-fade-up" style="animation-delay: 0.2s;">
+                        あなたの作ったメロディが、電車で流れる。
+                    </h2>
+                    <p class="hero__opening-subtitle animate-fade-up" style="animation-delay: 1.0s;">
+                        富山地方鉄道・越中舟橋駅の「車内メロディ」を作れる、<br class="hidden-mobile">
+                        一生に一度のクリエイト体験。
+                    </p>
+                    <p class="hero__opening-description animate-fade-up" style="animation-delay: 1.7s;">
+                        鉄道ファン、音楽クリエイター、そして地域を愛する事業者へ贈る、<br class="hidden-mobile">
+                        限定5枠の特別な商品です。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="hero__mobile">
+                <div class="hero__mobile-image-wrapper">
+                    <img src="images/ekimero_top.png" alt="Hero Top" class="hero__mobile-image">
+                </div>
+                <div class="hero__mobile-button-area">
+                    <button class="btn btn--accent hero__cta animate-fade-up" style="animation-delay: 4.0s;" onclick="smoothScrollTo('purchase')">
+                        体験を購入する
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop Layout -->
+            <div class="hero__desktop">
+                <div class="hero__desktop-image-wrapper">
+                    <div class="hero__parallax" id="heroParallax">
+                        <img src="images/funahashimelody_top.png" alt="Hero Desktop" class="hero__desktop-image">
+                        <div class="hero__desktop-gradient"></div>
+                    </div>
+
+                    <!-- Content overlaid on image -->
+                    <div class="hero__desktop-content">
+                        <button class="btn btn--accent btn--large hero__cta animate-fade-up" style="animation-delay: 4.0s;" onclick="smoothScrollTo('purchase')">
+                            体験を購入する
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="hero__scroll-indicator animate-fade-in" style="animation-delay: 4.5s;">
+                    <span class="hero__scroll-text">Scroll</span>
+                    <div class="hero__scroll-line">
+                        <div class="hero__scroll-line-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             Section 2: Concept
+        ======================================== -->
+        <section class="section concept" id="concept">
+            <div class="section__inner section__inner--centered">
+                <span class="section__label scroll-reveal">CONCEPT</span>
+                <h2 class="section__title scroll-reveal" style="--delay: 0.1s;">
+                    「あの駅の音」の作者は、<br>あなたです。
+                </h2>
+                <div class="concept__content scroll-reveal" style="--delay: 0.2s;">
+                    <p>
+                        鉄道ファンなら一度は想像したことがあるはず。<br>
+                        「もし自分が、あの駅のメロディを作れたら」
+                    </p>
+                    <p>
+                        その夢が、現実になります。<br>
+                        越中舟橋駅、到着前の20秒間。
+                    </p>
+                    <p>
+                        そこに流れるのは、あなたの想いが込められたメロディ。<br>
+                        大切な人へのメッセージ、あるいは、<br>
+                        あなたが奏でる楽器の音色かもしれません。
+                    </p>
+                    <p class="concept__highlight">
+                        「一生胸を張れる」体験を、あなたに。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             Section 3: Story (Social Value)
+        ======================================== -->
+        <section class="section story" id="story">
+            <div class="section__inner story__grid">
+                <!-- Image Side -->
+                <div class="story__image-wrapper scroll-reveal-left">
+                    <img src="images/ekimero8.png" alt="Social Value" class="story__image">
+                    <div class="story__image-overlay"></div>
+                </div>
+
+                <!-- Text Side -->
+                <div class="story__content">
+                    <div class="scroll-reveal-right" style="--delay: 0.3s;">
+                        <span class="section__label section__label--accent">STORY</span>
+                        <h2 class="section__title section__title--left">
+                            鉄道を守り、<br>地域とつながる新しい形
+                        </h2>
+                        <div class="section__divider"></div>
+                        <div class="story__text">
+                            <p>
+                                立山黒部アルペンルートなど世界的な観光資源を支えながら、日常の足として走り続ける富山地方鉄道。
+                            </p>
+                            <p>
+                                当たり前にあるはずの「日常の足」を絶やさず守り続けることは、決して平坦な道のりではありません。それでも、この鉄路を次世代へつなぐことは、地域というかけがえのない財産を守ることにつながります。
+                            </p>
+                            <p>
+                                この企画は、鉄道を「乗るもの」から「自ら関わり、形にするもの」へと変える挑戦です。あなたのクリエイティビティが、鉄道を応援する力になり、地域と鉄道をつなぐ新しい絆となります。
+                            </p>
+                            <div class="story__cta">
+                                <button class="btn btn--accent" onclick="smoothScrollTo('purchase')">
+                                    体験を購入する
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             Section 4: Specs (Product Detail)
+        ======================================== -->
+        <section class="section specs" id="specs">
+            <div class="section__inner">
+                <div class="section__header">
+                    <span class="section__label scroll-reveal">SPECS</span>
+                    <h2 class="section__title scroll-reveal" style="--delay: 0.1s;">体験内容</h2>
+                </div>
+
+                <div class="specs__grid">
+                    <!-- Image Side -->
+                    <div class="specs__image-wrapper">
+                        <div class="specs__image-container scroll-reveal-left">
+                            <img src="images/ekimero3.png" alt="Specs Visual" class="specs__image">
+                            <div class="specs__image-overlay"></div>
+                        </div>
+                        <div class="specs__notes scroll-reveal" style="--delay: 0.5s;">
+                            <p>※ 越中舟橋駅到着前の車内アナウンスに合わせて放送されます。</p>
+                            <p>※ 公序良俗に反する内容など、審査によりお断りする場合がございます。</p>
+                        </div>
+                    </div>
+
+                    <!-- Cards Side -->
+                    <div class="specs__cards">
+                        <div class="specs__card scroll-reveal" style="--delay: 0s;">
+                            <div class="specs__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <h3 class="specs__card-label">価格</h3>
+                            <div class="specs__card-value">250,000円</div>
+                            <div class="specs__card-sub">(税込)</div>
+                        </div>
+                        <div class="specs__card scroll-reveal" style="--delay: 0.1s;">
+                            <div class="specs__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <h3 class="specs__card-label">数量</h3>
+                            <div class="specs__card-value">限定5枠</div>
+                            <div class="specs__card-sub">先着順</div>
+                        </div>
+                        <div class="specs__card scroll-reveal" style="--delay: 0.2s;">
+                            <div class="specs__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <h3 class="specs__card-label">掲載期間</h3>
+                            <div class="specs__card-value">4ヶ月間</div>
+                            <div class="specs__card-sub">2026年4月〜予定</div>
+                        </div>
+                        <div class="specs__card scroll-reveal" style="--delay: 0.3s;">
+                            <div class="specs__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                            </div>
+                            <h3 class="specs__card-label">仕様</h3>
+                            <div class="specs__card-value">20秒以内</div>
+                            <div class="specs__card-sub">オリジナル音源</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             Section 5: Routes (Target Routes)
+        ======================================== -->
+        <section class="section routes" id="routes">
+            <div class="section__inner">
+                <div class="section__header">
+                    <span class="section__label scroll-reveal">TARGET ROUTES</span>
+                    <h2 class="section__title scroll-reveal" style="--delay: 0.1s;">あなたの音が流れる路線</h2>
+                    <p class="routes__subtitle scroll-reveal" style="--delay: 0.2s;">
+                        以下の区間を走行する電車内で放送される予定です。
+                    </p>
+                </div>
+
+                <div class="routes__grid">
+                    <div class="routes__item scroll-reveal" style="--delay: 0s;"><div class="routes__dot"></div><span>電鉄富山 発 上市 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.05s;"><div class="routes__dot"></div><span>電鉄富山 発 中滑川 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.1s;"><div class="routes__dot"></div><span>電鉄富山 発 電鉄黒部 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.15s;"><div class="routes__dot"></div><span>電鉄富山 発 宇奈月温泉 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.2s;"><div class="routes__dot"></div><span>上市 発 電鉄富山 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.25s;"><div class="routes__dot"></div><span>中滑川 発 電鉄富山 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.3s;"><div class="routes__dot"></div><span>電鉄黒部 発 電鉄富山 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.35s;"><div class="routes__dot"></div><span>浦山 発 電鉄富山 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.4s;"><div class="routes__dot"></div><span>宇奈月温泉 発 電鉄富山 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.45s;"><div class="routes__dot"></div><span>電鉄富山 発 立山 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.5s;"><div class="routes__dot"></div><span>電鉄富山 発 寺田経由岩峅寺 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.55s;"><div class="routes__dot"></div><span>立山 発 電鉄富山 行</span></div>
+                    <div class="routes__item scroll-reveal" style="--delay: 0.6s;"><div class="routes__dot"></div><span>岩峅寺 発 寺田経由電鉄富山 行</span></div>
+                </div>
+
+                <div class="routes__note scroll-reveal" style="--delay: 0.7s;">
+                    <p>※ 実際の運行ダイヤや車両運用により、放送される路線・車両は変動します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             Section 6: Benefit (NFT)
+        ======================================== -->
+        <section class="section benefit" id="benefit">
+            <div class="section__inner benefit__grid">
+                <!-- Content Side -->
+                <div class="benefit__content">
+                    <div class="scroll-reveal-right">
+                        <span class="section__label section__label--accent">SPECIAL BENEFIT</span>
+                        <h2 class="section__title section__title--left">
+                            購入者限定特典<br>
+                            <span class="benefit__title-sub">非公開車庫写真のNFT権利証</span>
+                        </h2>
+                        <div class="section__divider"></div>
+                        <div class="benefit__text">
+                            <p>
+                                普段は立ち入ることができない「富山地方鉄道の車庫内部」を収めた、貴重な写真を使用したデジタル権利証（NFT）をお渡しします。
+                            </p>
+                            <p>
+                                体験の証としてだけでなく、鉄道ファン垂涎のコレクション価値を持つ特別な記念品です。
+                            </p>
+                            <div class="benefit__cta">
+                                <button class="btn btn--accent" onclick="smoothScrollTo('purchase')">
+                                    体験を購入する
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Side -->
+                <div class="benefit__image-wrapper scroll-reveal-scale">
+                    <div class="benefit__image-frame">
+                        <img src="images/ekimero4.png" alt="NFT Benefit" class="benefit__image">
+                        <div class="benefit__image-shine"></div>
+                    </div>
+                    <div class="benefit__image-decor"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             Section 7: Timeline (Process)
+        ======================================== -->
+        <section class="section timeline" id="timeline">
+            <div class="section__inner section__inner--centered">
+                <div class="section__header">
+                    <span class="section__label scroll-reveal">PROCESS</span>
+                    <h2 class="section__title scroll-reveal" style="--delay: 0.1s;">音源制作のステップ</h2>
+                </div>
+
+                <div class="timeline__image-wrapper scroll-reveal" style="--delay: 0.2s;">
+                    <img src="images/ekimero2.png" alt="Process Steps" class="timeline__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             Section 8: Footer (CTA)
+        ======================================== -->
+        <section class="section footer" id="purchase">
+            <div class="footer__bg"></div>
+            <div class="section__inner footer__content">
+                <h2 class="footer__title">
+                    越中舟橋駅の車内メロディクリエイト体験を購入する
+                </h2>
+                <p class="footer__subtitle">
+                    限定5枠。<br>
+                    富山地方鉄道の新しい取り組みを体験してください。
+                </p>
+                <button class="btn btn--accent btn--large">
+                    体験を購入する
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
